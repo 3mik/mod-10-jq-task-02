@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Carousel</title>
 </head>
+
 <body>
-    <h1>Welcome to my page</h1>
-    <script src="js/script.js"></script>
+    <div class="wrap">
+        <div id="carousel">
+            <ul class="img-container">
+                <li data-id=1>
+                    <img src="https://placeimg.com/400/300/arch" alt="">
+                </li>
+                <li data-id=2>
+                    <img src="https://placeimg.com/400/300/nature" alt="">
+                </li>
+                <li data-id=3>
+                    <img src="https://placeimg.com/400/300/tech" alt="">
+                </li>
+                <li data-id=4>
+                    <img src="https://placeimg.com/400/300/animals" alt="">
+                </li>
+                <li data-id=5>
+                    <img src="https://placeimg.com/400/300/people" alt="">
+                </li>
+            </ul>
+        </div>
+        <div id="controls">
+            <ul class="ctrl-container">
+                <li class="active" data-ctrl=1></li>
+                <li data-ctrl=2></li>
+                <li data-ctrl=3></li>
+                <li data-ctrl=4></li>
+                <li data-ctrl=5></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <span id="prev">&lt</span>
+            <span id="next">&gt</span>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
 </body>
+
 </html>
