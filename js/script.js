@@ -76,14 +76,14 @@ $(function(){
         let clickId = $(this).attr('data-ctrl');        
         let collection = $('#carousel ul');
         let selectedImg = getSelected(clickId, collection.find('li'));
-        moveItem(selectedImg);
+        carouseList.animate({'marginLeft': -400}, 500, function(){moveItem(selectedImg)});
         auto = setInterval(changeSlide, 3000)
     });
     
     // next slide
     $('#next').click(function(){
         clearInterval(auto);
-        moveFirstSlide();
+        carouseList.animate({'marginLeft': -400}, 500, moveFirstSlide);
         auto = setInterval(changeSlide, 3000)
     });
   
@@ -91,7 +91,7 @@ $(function(){
     $('#prev').click(function(){
         console.log('from click prev');
         clearInterval(auto);
-        moveLastSlide();
+        carouseList.animate({'marginLeft': -400}, 500, moveLastSlide);
         auto = setInterval(changeSlide, 3000)    
     })
 })
